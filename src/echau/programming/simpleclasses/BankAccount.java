@@ -14,9 +14,14 @@ public class BankAccount implements Comparable<BankAccount> {
      * Creates a new BankAccount with a balance in dollars and the name of 
      * an account holder.
      * 
-     * @throws IllegalArgumentException If the <code>name</code> parameter is null.
+     * @throws IllegalArgumentException If the <code>balance</code> parameter is negative,
+     * or if the <code>name</code> parameter is null.
      */
     public BankAccount(final double balance, final String name) {
+        if (balance < 0.0) {
+            throw new IllegalArgumentException("Negative balance passed to BankAccount "
+                + "constructor (" + balance + ")");
+        }
         if (name == null) {
             throw new IllegalArgumentException("Name passed to BankAccount "
                 + "constructor is null");
@@ -78,8 +83,7 @@ public class BankAccount implements Comparable<BankAccount> {
      */
     @Override
     public int compareTo(final BankAccount account) {
-        if (this.name.equals(account.getName()) 
-            && this.balance == account.getBalance()) {
+        if (this.name.equals(account.getName()) && this.balance == account.getBalance()) {
             return 0;
         } else if (this.balance == account.getBalance()) {
             if (this.name.compareTo(account.getName()) > 0) {
