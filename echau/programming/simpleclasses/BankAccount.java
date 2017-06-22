@@ -4,7 +4,7 @@ package echau.programming.simpleclasses;
  * Represents a BankAccount with a balance and the name of an account holder.
  *
  * @author Eugene Chau
- * @version June 15, 2017
+ * @version June 22, 2017
  */
 public class BankAccount implements Comparable<BankAccount> {
     private double balance;
@@ -53,7 +53,9 @@ public class BankAccount implements Comparable<BankAccount> {
     }
     
     /**
-     * Compares two BankAccounts based on the name of the holder and the balance.
+     * Compares two BankAccounts based on the name of the holder and the balance. 
+     * Comparisons are made primarily based on the balances of both BankAccounts, 
+     * but if the balances are the same, compares the names of the account holders.
      * <br>
      * <br>
      * <b>Return values:</b>
@@ -79,13 +81,13 @@ public class BankAccount implements Comparable<BankAccount> {
         if (this.name.equals(account.getName()) 
             && this.balance == account.getBalance()) {
             return 0;
-        } else if (this.name.equals(account.getName())) {
-            if (this.balance > account.getBalance()) {
+        } else if (this.balance == account.getBalance()) {
+            if (this.name.compareTo(account.getName()) > 0) {
                 return 1;
             }
             return -1;
-        } else if (this.balance == account.getBalance()) {
-            if (this.name.compareTo(account.getName()) > 0) {
+        } else if (this.name.equals(account.getName())) {
+            if (this.balance > account.getBalance()) {
                 return 1;
             }
             return -1;
