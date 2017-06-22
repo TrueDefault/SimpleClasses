@@ -62,7 +62,7 @@ public class BankAccount implements Comparable<BankAccount> {
      * <ul>
      *  <li>If both names and balances of the two accounts are equal, returns 0.</li>
      *  <li>If the names are the same, but the balances are different, returns 1 if
-     *      the balance of this BankAccount is <i>greater</i> than the balance of the
+     *      the balance of this BankAccount is greater than the balance of the
      *      BankAccount in the parameter. Otherwise, returns -1.</li>
      *  <li>If the balances are the same, but the names are different, returns 1 if
      *      <code>this.getName().compareTo(account.getName())</code> returns a positive
