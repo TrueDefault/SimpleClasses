@@ -4,11 +4,17 @@
 # Log file
 *.log
 
+# Eclipse files
+*.project
+*.classpath
+bin/
+
 # BlueJ files
 *.ctxt
 
 # Mobile Tools for Java (J2ME)
-.mtj.tmp/
+.mtj
+.tmp/
 
 # Package Files #
 *.jar
@@ -25,3 +31,4 @@ hs_err_pid*
 doc/
 
 .DS_Store
+Main.java
