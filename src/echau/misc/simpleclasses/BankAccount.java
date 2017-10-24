@@ -1,4 +1,4 @@
-package echau.programming.simpleclasses;
+package echau.misc.simpleclasses;
 
 /**
  * Represents a BankAccount with a balance and the name of an account holder.

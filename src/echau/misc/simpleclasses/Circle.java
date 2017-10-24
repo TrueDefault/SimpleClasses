@@ -1,4 +1,4 @@
-package echau.programming.simpleclasses;
+package echau.misc.simpleclasses;
 
 /**
  * Represents a circle.
